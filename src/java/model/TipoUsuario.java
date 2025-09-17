@@ -1,9 +1,9 @@
 package model;
 
 import java.util.ArrayList;
-import model.framework.DataAcessObject;
+import model.framework.DataAccessObject;
 
-public class TipoUsuario extends DataAcessObject {
+public class TipoUsuario extends DataAccessObject {
     
     private int id;
     private String nome;
@@ -67,7 +67,7 @@ public class TipoUsuario extends DataAcessObject {
     }
 
     @Override
-    protected DataAcessObject fill(ArrayList<Object> data) {
+    protected DataAccessObject fill(ArrayList<Object> data) {
         //Segue a ordem nas colunas no banco de dados
         id = (int) data.get(0);
         nome = (String) data.get(1);
