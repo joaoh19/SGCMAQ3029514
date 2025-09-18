@@ -239,6 +239,7 @@ public abstract class DataAccessObject {
            // Preenche o objeto com os dados do banco
            fill(data); 
            setNovelEntity(false); // Após carregar, não é mais uma entidade nova
+           setChangedEntity(false);
        }
         
         return result;
@@ -295,4 +296,12 @@ public abstract class DataAccessObject {
     // Cria uma cópia do objeto (clone)
     // Útil para operações que requerem cópias dos objetos persistentes
     protected abstract <T extends DataAccessObject> T copy();
+
+    @Override
+    public boolean equals(Object obj) {
+        throw new RuntimeException("equals must be override");
+    }
+    
+    
+    
 }

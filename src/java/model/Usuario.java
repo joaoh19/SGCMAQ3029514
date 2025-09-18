@@ -105,6 +105,20 @@ public class Usuario extends DataAccessObject {
         
         return copia;
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Usuario){
+            Usuario aux = (Usuario) obj;
+            if(getId() == aux.getId()){
+                return true;
+            }else{
+                return false;
+            }  
+        }else{
+            return false;
+        }
+    }
 
     // Representação em string do objeto para debug e exibição
     @Override

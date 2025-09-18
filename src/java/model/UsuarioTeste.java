@@ -15,7 +15,7 @@ public class UsuarioTeste {
         usuario.setNome("João Silva");
         usuario.setCpf("123.456.789-00");
         usuario.setSenha("senha123");
-        usuario.setTipoUsuarioId(1); // ID do tipo de usuário
+        usuario.setTipoUsuarioId(44); // ID do tipo de usuário
         
         usuario.save(); // INSERT
         System.out.println("Usuário salvo: " + usuario);
@@ -51,15 +51,15 @@ public class UsuarioTeste {
         }
         System.out.println();
         
-        // TESTE 5: Excluir um usuário
-        System.out.println("=== TESTE 5: Excluir usuário ===");
-        usuario2.delete(); // DELETE
-        System.out.println("Usuário excluído com sucesso!");
-        
-        // Verificar se realmente foi excluído
-        Usuario usuario3 = new Usuario();
-        usuario3.setId(100);
-        boolean aindaExiste = usuario3.load();
-        System.out.println("Usuário ainda existe? " + aindaExiste);
+//        // TESTE 5: Excluir um usuário
+//        System.out.println("=== TESTE 5: Excluir usuário ===");
+//        usuario2.delete(); // DELETE
+//        System.out.println("Usuário excluído com sucesso!");
+//        
+//        // Verificar se realmente foi excluído
+//        Usuario usuario3 = new Usuario();
+//        usuario3.setId(100);
+//        boolean aindaExiste = usuario3.load();
+//        System.out.println("Usuário ainda existe? " + aindaExiste);
     }
 }

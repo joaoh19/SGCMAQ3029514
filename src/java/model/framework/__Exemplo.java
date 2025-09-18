@@ -14,20 +14,20 @@ public class __Exemplo {
         
         TipoUsuario tp = new TipoUsuario();
        
-//        tp.setId(44);
-//        tp.setModuloAdministrativo("N");
-//        tp.setModuloAgendamento("N");
-//        tp.setModuloAtendimento("S");
-//       
-//     
-//        
-//        
-//        tp.save(); // update
-//        
-//        tp.setModuloAdministrativo("S");
-//        tp.setModuloAgendamento("S");
-//        
-//        tp.save(); // update
+        tp.setId(44);
+        tp.setModuloAdministrativo("N");
+        tp.setModuloAgendamento("N");
+        tp.setModuloAtendimento("S");
+       
+     
+        
+        
+        tp.save(); // update
+        
+        tp.setModuloAdministrativo("S");
+        tp.setModuloAgendamento("S");
+        
+        tp.save(); // update
 
 
        
