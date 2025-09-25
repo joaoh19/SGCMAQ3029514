@@ -46,6 +46,7 @@ public class __Exemplo {
           ArrayList<TipoUsuario> lst = new TipoUsuario().getAllTableEntities();
           System.out.println( lst );
           
+          
         
     }
     

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>GetPost Formulário</title>
@@ -6,22 +7,26 @@
     </head>
     <body>
         <div>
-        <form action="http://localhost:8080/SGCMAQ3029514/aulas/servlet/getpost" method="get">
-            <h2>Formulário</h2>
-            <p>
-                <label for="CampoA"> Campo A: </label>
-                <input type="text" id="CampoA" name="CampoA"><br><br/>
-                
-                <input type="checkbox" id="opcaoA" name="opcaoA" value="OpcaoA">
-                <label for="opcaoA">OPção A </label><br><br/>
-              
-                <input type="checkbox" id="opcaoB" name="opcaoB" value="opcaoB">
-                <label for="opcaoB">OPção B </label><br><br/>
-                
-                <input type="submit"  name="btEnviar" value="Salvar">
-            </p>
-            
-          <div/>  
-        </form>
+<!--            <form action="http://localhost:8080/SGCMAQ3029514/aulas/servlet/getpost" method="get">-->
+            <form action="http://localhost:8080/SGCMAQ3029514/aulas/servlet/getpost" method="post">
+
+                <h2>Formulário</h2>
+                <p>
+                    <label for="campoA"> Campo A: </label>
+                    <input type="text" id="campoA" name="campoA" pattern="\d+" title="apenas digitos" required/><br><br/>
+
+                    <input type="checkbox" id="opcaoA" name="opcaoA">
+                    <label for="opcaoA">OPção A </label><br><br/>
+
+                    <input type="checkbox" id="opcaoB" name="opcaoB">
+                    <label for="opcaoB">OPção B </label><br><br/>
+
+                    <input type="submit"  name="btEnviar" value="Salvar">
+                </p>
+
+
+            </form>
+
+        <div/>  
     </body>
 </html>
