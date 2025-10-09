@@ -22,7 +22,7 @@
 
         <h1>Cadastro de Usuário</h1>
 
-        <form action="<%= request.getContextPath() %>/home/usuario?action=<%= action %>" method="post">
+        <form action="<%= request.getContextPath() %>/home?action=<%= action %>&task=usuario" method="post">
 
             <label for="id">ID:</label>
             <input type="text" id="id" name="id" pattern="\d+" title="Apenas números"
@@ -35,7 +35,7 @@
                    required><br/><br/>
 
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf"
+            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00"
                    value="<%= (usuario != null && usuario.getCpf() != null) ? usuario.getCpf() : "" %>"
                    required><br/><br/>
 
@@ -45,7 +45,7 @@
                    required><br/><br/>
 
             <label for="tipoUsuarioId">Tipo de Usuário (ID):</label>
-            <input type="number" id="tipoUsuarioId" name="tipoUsuarioId"
+            <input type="text" id="tipoUsuarioId" name="tipoUsuarioId" pattern="\d+" title="Apenas números"
                    value="<%= (usuario != null) ? usuario.getTipoUsuarioId() : "" %>"
                    required><br/><br/>
 

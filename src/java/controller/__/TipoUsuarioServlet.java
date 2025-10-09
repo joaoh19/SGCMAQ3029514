@@ -1,4 +1,4 @@
-package controller;
+package controller.__;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,7 +34,7 @@ public class TipoUsuarioServlet extends HttpServlet {
                     ExceptionLogTrack.getInstance().addLog(ex);
                 } 
             }    
-            response.sendRedirect(request.getContextPath() +"/home/tipousuario.jsp");
+            response.sendRedirect(request.getContextPath() +"/home/app/tipousuario.jsp");
     }
 
  
@@ -84,7 +84,7 @@ public class TipoUsuarioServlet extends HttpServlet {
             ExceptionLogTrack.getInstance().addLog(ex);
         } 
         
-        response.sendRedirect(request.getContextPath() +"/home/tipousuario.jsp");
+        response.sendRedirect(request.getContextPath() +"/home/app/tipousuario.jsp");
      
     }
 }

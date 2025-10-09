@@ -1,4 +1,4 @@
-package controller;
+package controller.__;
 
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -23,6 +23,7 @@ public class UsuarioServlet extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("id"));
             Usuario usuario = new Usuario();
             usuario.setId(id);
+            
 
             try {
                 usuario.delete();
@@ -32,7 +33,7 @@ public class UsuarioServlet extends HttpServlet {
         }
 
         // Redireciona para a listagem
-        response.sendRedirect(request.getContextPath() + "/home/usuario.jsp");
+        response.sendRedirect(request.getContextPath() + "/home/app/usuario.jsp");
     }
 
     @Override
@@ -66,6 +67,6 @@ public class UsuarioServlet extends HttpServlet {
             ExceptionLogTrack.getInstance().addLog(ex);
         }
 
-        response.sendRedirect(request.getContextPath() + "/home/usuario.jsp");
+        response.sendRedirect(request.getContextPath() + "/home/app/usuario.jsp");
     }
 }

@@ -14,7 +14,7 @@ public class UsuarioTeste {
         usuario.setId(100);
         usuario.setNome("João Silva");
         usuario.setCpf("123.456.789-00");
-        usuario.setSenha("senha123");
+//        usuario.setSenha("senha123");
         usuario.setTipoUsuarioId(44); // ID do tipo de usuário
         
         usuario.save(); // INSERT
@@ -36,7 +36,7 @@ public class UsuarioTeste {
         // TESTE 3: Atualizar um usuário
         System.out.println("=== TESTE 3: Atualizar usuário ===");
         usuario2.setNome("João Silva Santos"); // Alterar o nome
-        usuario2.setSenha("novaSenha456"); // Alterar a senha
+//        usuario2.setSenha("novaSenha456"); // Alterar a senha
         
         usuario2.save(); // UPDATE
         System.out.println("Usuário atualizado: " + usuario2);
