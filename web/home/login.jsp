@@ -17,8 +17,11 @@
             <%
                 
              HttpSession sessao = request.getSession(false);
-             if( sessao != null ){
-                 response.sendRedirect("home/app/menu.jsp");
+             if( ( sessao != null ) &&  
+                    (sessao.getAttribute("usuario") != null) &&
+                    (sessao.getAttribute("tipo_usuario") != null)
+                     ){
+                 response.sendRedirect(request.getContextPath() + "/home/app/menu.jsp");
              }
              
             %>
@@ -26,20 +29,23 @@
             <%
 
             int id = -1 ;
-            for( Cookie c : request.getCookies() ){
+            Cookie[] cookies = request.getCookies();
+            if( cookies != null ){
+            for( Cookie c : cookies ){
                 if( c.getName().equals("id") ){
                     id = Integer.parseInt( c.getValue() );
-                }
+               }
             }
-            
+         }    
+
             %>
             
              <h1>Login</h1>
             
             <form action="<%= request.getContextPath()%>/home?task=login" method="post">
                 
-                <label for="senha">ID</label>
-                <input type="text" id="id" name="id" pattern="\d+" title="apenas digitos"  value="<%= id != -1 ? id : ""%>" required><br/>
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" pattern="\d+" title="apenas digitos"  value="<%= ( id != -1 ) ? id : ""%>" required><br/>
                 
                 
                 

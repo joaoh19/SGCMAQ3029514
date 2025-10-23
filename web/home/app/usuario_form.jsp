@@ -37,7 +37,7 @@
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00"
                    value="<%= (usuario != null && usuario.getCpf() != null) ? usuario.getCpf() : "" %>"
-                   required><br/><br/>
+                   ><br/><br/>
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha"
