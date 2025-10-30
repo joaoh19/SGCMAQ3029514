@@ -16,7 +16,7 @@ public class DataBaseConnections {
         pool = new ArrayList<>();
     }
     
-    static DataBaseConnections getInstance(){
+    public static DataBaseConnections getInstance(){
         if(singleton == null){
         singleton = new DataBaseConnections();
         }

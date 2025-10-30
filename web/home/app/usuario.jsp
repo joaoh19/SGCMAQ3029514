@@ -9,6 +9,9 @@
     </head>
     <body>
         
+        <%@include file="/home/app/modulos.jsp" %>
+        
+        
         <%ArrayList<Usuario> dados = new Usuario().getAllTableEntities();%>
         
         <h1>Cadastro Usuario</h1>

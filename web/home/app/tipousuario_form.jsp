@@ -7,6 +7,9 @@
         <title>Tipo Usuário</title>
     </head>
     <body>
+        
+        <%@include file="/home/app/modulos.jsp" %>
+        
         <% 
             TipoUsuario tp = null;
             

@@ -7,6 +7,10 @@
         <!--em minutos-->
         <session-timeout>2880</session-timeout>
     </session-config>
+    <listener> 
+    <listener-class>controller.ContextListener</listener-class>
+    </listener>
+    
     <filter>
         <filter-name>AutenticadorApp</filter-name>
         <filter-class>controller.AutenticadorApp</filter-class>

@@ -7,6 +7,9 @@
         <title>Cadastro de Usuário</title>
     </head>
     <body>
+        
+        <%@include file="/home/app/modulos.jsp" %>
+        
         <%
             Usuario usuario = null;
             String action = request.getParameter("action");
