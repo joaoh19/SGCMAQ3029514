@@ -182,10 +182,18 @@ public class FrontController extends HttpServlet {
         String action = request.getParameter("action");
 
         int id = Integer.parseInt(request.getParameter("id"));
+        
         String nome = request.getParameter("nome");
+        
         String cpf = request.getParameter("cpf");
+        
         String senha = request.getParameter("senha");
+        
+        String endereco = request.getParameter("endereco");
+        
         int tipoUsuarioId = Integer.parseInt(request.getParameter("tipoUsuarioId"));
+        
+        
 
       
             Usuario usuario = new Usuario();
@@ -198,6 +206,7 @@ public class FrontController extends HttpServlet {
             usuario.setNome(nome);
             usuario.setCpf(cpf);
             usuario.setSenha(senha);
+            usuario.setEndereco(endereco);
             usuario.setTipoUsuarioId(tipoUsuarioId);
 
             usuario.save(); // DataAccessObject gerencia create/update automaticamente

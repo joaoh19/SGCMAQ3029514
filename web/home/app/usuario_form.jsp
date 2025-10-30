@@ -46,6 +46,14 @@
             <input type="password" id="senha" name="senha"
                    value="<%= (usuario != null && usuario.getSenha() != null) ? usuario.getSenha() : "" %>"
                    required><br/><br/>
+            
+            <label for="endereco">CEP:</label>
+            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" title="">
+                   <br/><br/>
+            
+            <label for="endereco">Endereço:</label>
+            <textarea type="text" id="text" name="endereco" rows="4" cols="50">"<%= (usuario != null && usuario.getEndereco()!= null) ? usuario.getEndereco(): ""%>"
+                   </textarea><br/><br/>
 
             <label for="tipoUsuarioId">Tipo de Usuário (ID):</label>
             <input type="text" id="tipoUsuarioId" name="tipoUsuarioId" pattern="\d+" title="Apenas números"

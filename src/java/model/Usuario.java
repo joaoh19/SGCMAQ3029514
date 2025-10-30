@@ -14,20 +14,15 @@ public class Usuario extends DataAccessObject {
     private String cpf;
     private String senha;
     private int tipoUsuarioId; // Chave estrangeira para tabela tipo_usuario
+    private String endereco;
 
     // Construtor padrão
     public Usuario() {
-        super("sgcm_bd.usuarios");
+        super("usuarios");
     }
+    
+    
 
-    // Construtor completo para criar novo usuário
-    public Usuario(String nome, String cpf, String senha, int tipoUsuarioId) {
-        this();
-        this.nome = nome;
-        this.cpf = cpf;
-        this.senha = senha;
-        this.tipoUsuarioId = tipoUsuarioId;
-    }
 
     // Getters e Setters com registro de alterações (Unit of Work)
     public int getId() {
@@ -60,6 +55,15 @@ public class Usuario extends DataAccessObject {
     public String getSenha() {
         return senha;
     }
+    
+   public String getEndereco(){
+       return endereco;
+   }
+   
+   public void setEndereco(String endereco){
+       this.endereco = endereco;
+       addChange("endereco", this.endereco);
+   }
 
     public void setSenha(String senha) throws Exception {
         if (senha == null) {
@@ -106,8 +110,10 @@ public class Usuario extends DataAccessObject {
         id = (int) data.get(0);
         nome = (String) data.get(1);
         cpf = (String) data.get(2);
-        senha = (String) data.get(3);
-        tipoUsuarioId = (int) data.get(4);
+        endereco = (String) data.get(3);
+        senha = (String) data.get(4);
+        tipoUsuarioId = (int) data.get(5);
+        
         return this;
     }
 
@@ -122,6 +128,7 @@ public class Usuario extends DataAccessObject {
         copia.setCpf(getCpf());
         copia.senha = (getSenha());
         copia.setTipoUsuarioId(getTipoUsuarioId());
+        copia.endereco = (getEndereco());
 
 // marca a cópia como não sendo uma nova entidade
         copia.setNovelEntity(false);
@@ -151,7 +158,8 @@ public class Usuario extends DataAccessObject {
                 + ", nome='" + nome + '\''
                 + ", cpf='" + cpf + '\''
                 + ", senha='" + senha + '\''
-                + ", tipoUsuarioId=" + tipoUsuarioId
+                + ", tipoUsuarioId=" + tipoUsuarioId + '\''
+                + ", endereco=" + endereco
                 + '}';
     }
 }
